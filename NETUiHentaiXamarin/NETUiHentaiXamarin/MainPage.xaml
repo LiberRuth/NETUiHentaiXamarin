@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NETUiHentaiXamarin.MainPage"
+             Title="메인">
+
+    <StackLayout>
+        <ScrollView>
+            <StackLayout >
+                <!---<Button Text="요청" Clicked="Button_Clicked"/>-->
+                <!--<ActivityIndicator x:Name="actl"  IsRunning="False"></ActivityIndicator>-->
+                <CollectionView x:Name="listViews"
+                            ItemsSource="{Binding group_list}"
+                            SelectionMode="Single"
+                            SelectionChanged="listViews_SelectionChanged"
+                            BackgroundColor="Transparent">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.RowSpan="2"
+                                   Source="{Binding Imageurl}"
+                                   Aspect="AspectFill"/>
+                                <Label Grid.Column="1"
+                                   Text="{Binding Title}"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Start"
+                                   Margin="5,0,0,0"/>
+                                <Label Grid.Row="0"
+                                   Grid.Column="1"
+                                   Text="{Binding Types}"
+                                   VerticalOptions="EndAndExpand"
+                                   Margin="5,10,0,0"/>
+                                <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   Text="{Binding Date}"
+                                   FontAttributes="Italic"
+                                   VerticalOptions="End"
+                                   Margin="5,15,0,0"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" HorizontalOptions="Center" >
+                    <Button x:Name="ADDBtnList" Text="next" Clicked="BtnAdd_Clicked" BackgroundColor="#2196F3" WidthRequest="100" TextColor="White" CornerRadius="30" Margin="0,0,0,5"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </StackLayout>
+
+</ContentPage>

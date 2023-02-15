@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NETUiHentaiXamarin.view.DetailPage"
+             Title="상세보기">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Label x:Name="TextDeatll"
+                           Text="Welcome to .NET Xamarin!"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Center" />
+                    <Image x:Name="DetailIMG"
+                           Margin="0,25,0,0"      
+                           Source=""
+                           WidthRequest="200"/>
+                    <Label x:Name="Title_Label"
+                           Margin="25,25,25,0"  
+                           Text="제목"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Center" 
+                           FontAttributes="Bold"
+                           FontSize="Title"/>
+                    <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" HorizontalOptions="Center" >
+                        <Button x:Name="Download_Btn_text"
+                                Clicked="Download_Btn_text_Clicked"
+                                Text="다운로드"
+                                Margin="20,5,20,0" 
+                                WidthRequest="150"
+                                CornerRadius="10"
+                                BackgroundColor="#2196F3"
+                                TextColor="White"/>
+                        <Button x:Name="View_Btn_text"
+                                Text="보기" 
+                                Margin="20,5,20,0" 
+                                WidthRequest="150"
+                                Clicked="View_Btn_text_Clicked"
+                                CornerRadius="10"
+                                BackgroundColor="#2196F3"
+                                TextColor="White"/>
+                    </StackLayout>
+                   <Label Text="정보" 
+                          Margin="0,5,0,0"
+                          FontSize="Subtitle"
+                          HorizontalOptions="Center" />
+                    <Frame Margin="20,10,20,0" CornerRadius="20">
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="유형: "/>
+                                <Label x:Name="type_Label" Text="N/A"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="작가: "/>
+                                <Label x:Name="artist_Label" Text="N/A"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="언어: "/>
+                                <Label x:Name="language_Label" Text="N/A"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="게시일: "/>
+                                <Label x:Name="date_Label" Text="N/A"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="용량: "/>
+                                <Label x:Name="datasizes_Label" Text="N/A"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="고유번호: "/>
+                                <Label x:Name="number_Label" Text="N/A"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="총 페이지: "/>
+                                <Label x:Name="pages_Label" Text="N/A"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Label Text="태그" 
+                           Margin="0,5,0,0"
+                           FontSize="Subtitle"
+                           HorizontalOptions="Center" />
+                    <Frame Margin="20,10,20,10" CornerRadius="20">
+                        <StackLayout>
+                            <Label x:Name="genre_Label" Text="-"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
